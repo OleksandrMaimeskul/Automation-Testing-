@@ -68,6 +68,8 @@ public class iframeConcept {
         Assert.assertEquals(links.size(),22);
 
 /*
+
+
         TASK2:
         1-Click the category 1 button
         2-Validate the header is "Category Archives: SeleniumTesting"
