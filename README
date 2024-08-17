@@ -1,0 +1,481 @@
+Batch 21:
+Schedule for rest of the course:
+* JAVA        	-->  2.5 months --> COMPLETED
+* HTML        	-->  2-2.5 fays --> COMPLETED
+* Selenium    	-->  1.5 months (UI(Frontend Testing tool))
+* Cucumber   	-->  4-5 days (Collaboration tool) --> Technical - Non-Technical
+* API        	-->  8-10 days (BackEnd Testing Tool)
+  --> POSTMAN (Manual Testing)
+  --> Rest - API (Automotaion Testing Tool)
+* Appium    	 --> 3-4 days for Mobile Testing
+* SQL       	 --> 4-6 days for DATABASE
+* Jenkins  		 --> 1-2 days for Remote Run
+* Selenium Grid  --> 1 day for Parralell Testing
+* Github 		 --> 1 day for Version Control
+* Graduation 	 --> 1 day for Graduation Ceremony and Resume Preparation
+
+=================================WELCOME to HTML ====================================
+
+
+HTML --> tool to create a website
+HTML: (HypeText Markup Language)
+		--> is the purpose of learning html?
+		*HTML is a way to organize / create / sctructured your tags, pictures, videos and
+		special attributes on the website
+		* It is a markup language and we are going to use html to be able to :
+		** During automation, you will find the location of the element to automate the process.
+		(HTML knowledge makes is faster and easier);
+		** We are going to get used to HTML structure of website which will "Boost Your Automotaion
+		Skills"
+	--> what is the components of the HTML ?
+			* HTML : is kinda your "SKIN" that covers everything on the website
+			* HEAD : is kinda your "HEAD", that cover important part of the website(title)
+			* BODY : is kinda your "BODY" that covers most of the parts of website.
+
+
+
+Lesson 2
+
+Recap
+HTML : HyperText Markup Language
+
+	--> HTML ( Parent of everything)
+	--> HEAD(Sibling of Body or Child of HTML)
+	--> BODY (Sibling of Head or Child of HTML)
+Purpose of Learning HTML :
+	--> Boosting your Automation Skills (UI);
+
+Tags: (Special Keywords for some functions)
+	* h1 - h6   --> Headers(h1 --> Largest h6 --> Smallest)
+	* p 	    --> Paragraph
+	* ol 	    --> Ordered List (comes with li) --> (1,2,3,4,5,6)
+	* ul 	    --> Unordered List (comes with li) --> (* * * * * *)
+	* br 	    --> Break (makes a full line of space)
+	* strong, b --> Bold (it makes the word/s bold )
+	* em,i 		--> Italic (it makes the word/s italic)
+	* a 		--> Anchor (it makes the word/s clickable)
+	* hr 		--> Horisontal (It makes a horizontal line)
+	* u 		--> Underline (It Underline word or words)
+	* img 		--> Image ( You can put on the website)
+
+	ATTRIBUTES : Special sub-features
+	* href:"url" 		--> you will provide the source of website link(url) in here
+	 < a href = "https://www.amazon.com/" >Amazon<
+ 	* target : "blank"	--> You can open the link with a new tab
+ 	 < a href = "https://www.amazon.com/" target ="_blank" >Amazon<
+ 	* style : 			--> It is the way to do some stylish things
+ 					--> color  --> Background Color  --> Text Allign(center)
+ 	SPECIAL FEATURES:
+ 	&nbsp; --> It makes a single space
+
+ 	CSS: Cascading Style Sheet
+ 	it is a way to style up your website like color, Background-color,
+ 	layouts, front etc
+ 			--> Why do we use CSS?
+ 				* During the Automation, time to time we eill be asked to validate "COLOR"
+ 				ot "Background-Color" of the webElement
+
+
+
+ Lesson 3
+
+ HTML: HyperText Markup Language --> BOST YOUR AUTOMATION SKILLS
+ Tags : h1-h6,u,a,hr,br,em,i,strong,b,body,html,head,title
+ img,link,button,label,input,p,ol,ul, li, table, tbody,thead,th, td,tr;
+ATTRIBUTES: src(img), href(a), target(a(_blank)), width(img)
+id, class,border(table), placeholder(input),style
+SPECIAL SIGN: &nbsp
+
+CSS: Cascading Style Sheet(It is all about style of the website)
+* COLOUR   * Background-Color
+
+h3{
+  color=blue;
+  background-color=yellow;
+}
+
+#id -->It finds the element with CSS and ID attribute
+
+.class -->it finds the element with CSS and class attribute
+
+
+===================WELCOME TO SELENIUM ==========
+
+1- What is Selenium?
+		--> Selenium is an UI automation tool. It works with only
+		"Web Application(browser)"(chrome,safari,edge,firefox,Ebay,Facebook)
+
+
+2-Why do we need Selenium?
+
+To make the testing (UI) faster and more reliable because automation
+does not overlook,
+
+3 - How do you use Selenium ?
+		To be able to use Selenium, we need an IDE(Intellij) and Selenium
+		Library.
+
+INTERVIEW QUESTIONS :
+
+1 - Can you tell what UI automationtool you are using and what is the advantage
+and disadvantage of it ?
+--> I am using "SELENIUM" for UI Automation tool.
+disadvantage:
+1-Selenium cannot automate pictures, captcha
+2-Selenium does not have any customer Service
+3 - Selenium does not have report card system
+4-Selenium can automate only "WEB Applications" (WEB BROWSER)
+advantage:
+1-Selenium is an open free source(Github example)
+2-Selenium has a big community
+3-Selenium supports multiple browsers and languages
+
+2 - Can you tell types of Selenium and which one do you use in your
+	current automation framework?
+
+	We have multiple types of Selenium
+	*Selenium RC : (Remote Control) --> remotely check servers during automation
+	*Selenium IDE: (Integretion Development Environment) --> Record and Run
+	*** Selenium WebDriver *** -->> It is a Librarythat we can add our project
+	* Selenium Grid --> It is all about paralell testing
+
+
+
+Lesson 03
+
+INTERVIEW QUESTIONS:
+
+1 - What is the difference between driver.get() and driver.navigate() ?
+		A--> driver.get() waits for all webElement to be loaded on the page
+		A--> driver.navigate.to() waits fpr certain elements that you are looking for
+		B--> driver.get() does not have methods
+		B--> driver.navigate does have 4 methods(refresh, back,froward,to)
+2-What is the difference between driver.close() and driver.quit()
+		  A-->driver.close will close only current page(one)
+  		A-->driver.quit() will close all the pages that opened during automation(>=one)
+
+ Lesson 04
+
+ INTERVIEW QUESTIONS:
+
+1-What type of locators do you use during UI automation in Selenium ?
+
+  LOCATORS:It is a way to find the location of WebElement
+
+  There are 8 types of locators in Selenium?
+
+   *Id                  (driver.findElement(By.id("IdAttributeValue")))
+
+   *Name                (driver.findElement(By.name("NameAttributeValue")))
+
+   *ClassName           (driver.findElement(By.className("ClassNameAttributeValue"))
+
+   *TagName             (driver.findElement(By.tagName("TagName")))
+
+   *LinkText            (driver.findElement(By.linkText("textValue"))) + MUST HAVE "a" tagname
+
+   *PartialLinkText     (driver.findElement(By.PartialLinkText("partialText"))) +Must Have "a" Tagname
+
+ ***CSS                 (driver.findElement(By.cssSelector("#id" or ".class")))
+
+ ***XPATH               (driver.findElement(By.xpath()))
+
+2-Which one do you use the most ?
+
+  I prefer using CSS first since it is easy to use and fast, but for flexibility I would rather
+
+  using XPATH.
+
+  WebElement Methods:
+
+  WebElement element=driver.findElement(By.id("idValue"));
+
+  element.
+
+    *getText()                              -->It gets the text from WebElement
+
+    *sendKeys()                             -->It writes the data on the boxes
+
+    *click()                                -->It clicks the WebElement
+
+    *isDisplayed()                          -->It checks the WebElement is visible or not
+
+    *isSelected()                           -->It checks the WebElement is selected or not
+
+    *isEnabled()                            -->It checks the box is clickable or not.
+
+
+Lesson 05
+
+LOCATOR:It is a way to locate the WebElement
+
+ *XPATH:Is the advance, flexible locator type
+
+INTERVIEW QUESTION:
+
+1-What is the difference between Absolute and Relative Xpath and which one do you use the most?
+
+  *Absolute Xpath:/html/div[2]/div/a[@id='idValue'] -->Single Slash + Starts from 'html'
+
+  *Relative Xpath://a[@id='idValue'] or //div//a[@id='idValue'] -->Double Slash + Directly Child
+
+  or Parent/Child
+
+XPATH Structure:
+
+    1-//TagName
+
+*** 2-//TagName[@Attribute='AttributeValue']
+
+ ** 3-//TagName[contains(text(),'textValue')] -->contains matchup Text
+
+ *  4-//TagName[.='textValue']                -->%100 Matchup Text
+
+-->I use the most is "RELATIVE XPATH" because It is easier and flexible.
+
+
+=======================SELENIUM LVL 2 =============================================
+
+RECAP:8/10/2024
+
+TestNG --> is a framework to support and make your automation framework organized,structured
+
+and professional.
+
+    --> @Test --> is like "main Method" which is an engine to execute your code.
+
+@Test                                  @Test
+public void validateHeader(){          public void validateNegativeScenario(){}
+
+}                                       }
+
+    --> Assert -->is a class that does validation for your test cases
+
+@Test                                     @Test                                 @Test
+public void validateTitle(){              public void validateIsDisplayed(){    public void checkBox(){
+
+  Assert.assertEquals(actual,expected)    Assert.assertTrue(item.isDisplayed)   Assert.assertFalse(box.isSelected)
+}
+
+KeyWords of TestNG:
+
+--> @Test(priority=1)                    --> @Test(priority=2)                  @Test(invocationCount=20)
+    public void validateHeader(){}           public void validateTitle(){}      public void createMockData()
+
+INTERVIEW QUESTIONS:
+
+1-How do you do you validations in your framework?
+
+ -->I use Assert class with:
+
+    *Assert.assertEquals(actual,expected) -->it compares actual valute with expected value
+
+    *Assert.assertTrue(actual.contains(expected)) -->It checks the boolean condition is "TRUE" (actual.contains(expected))
+
+    *Assert.assertFalse(box.isSelected) -->It checks the box should not be selected.Condition is expected "FALSE"
+
+2-How do you change the execution order of your test Cases?
+
+   -->I use "Priority" keyword for that.
+
+
+Lesson 06
+
+TestNG:
+
+1-What is TestNG?
+
+  It is a framework(libraries,methods,variables,classes,etc...)(Selenium Framework,Java Framework)
+
+2-Why do we need TestNG?
+
+  To be able to make your automation framework("More Organized","Professional","Structured")
+
+    -->We need to download TestNG library(Dependency) from MVN repository.
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.10.2</version>
+    <scope>test</scope>
+</dependency>
+
+
+Lesson 07
+
+
+RECAP:8/13/2024
+
+ACTIONS CLASS: It is a class to handle "MOUSE ACTIONS"
+
+  Actions actions=new Actions(driver);
+
+  actions.
+
+    * contextClick    --> It right clicks on WebElement
+
+    * doubleClick     --> It double clicks on WebElement
+
+    * moveToElement   --> It hovers over the WebElement
+
+    * dragAndDrop     --> It drags the WebElement and Drop to the Target
+
+    * click           --> It clicks the WebElement
+
+    * sendKeys        --> It sends the data to the box
+
+    * scrollByAmount  --> It scrolls the page based on pixel (x,y) (300,300)
+
+  *** perform         --> It performs the action
+
+
+  INTERVIEW QUESTIONS:
+
+  1- How do you handle "NOSUCH ELEMENT EXCEPTION" ?
+
+    -->If something fails(red on the console and Exception keyword), please follow these steps
+
+      *Always cherck the console and find "Exception Type" thenn continue reading and make sure your
+
+      exception type is "NOSUCHELEMENT".
+
+      *Then Scroll all the way down from console and click "BLUE LINK" which will point th exact location
+
+      of failure.
+
+       SOLUTION:
+
+         *Your locator type might be wrong, please check and fix it
+
+         *Your locator value might be missing or wrong, please check and fix it
+
+         *You are looking for the element in a correct page (Please observe your automation with Thread.sleep)
+
+         *Automation is so fast, so you need to put Thread.sleep (MOSTLY IT HAPPENS AFTER CLICK)
+
+  2- How do you handle "STALE ELEMENT REFERENCE EXCEPTION" ?
+
+     -->This exception is all about "UPDATING","REFRESHING","UPLOADING" the html(DOM)
+
+       SOLUTION:
+
+        * Put Thread.sleep() before failure(find the location of failure from console)
+
+      *** Re-assign the WebElement
+
+        * driver. navigate.refresh()(LEAST USAGE)
+
+  3- How do you handle "INVALID SELECTOR EXCEPTION"?
+
+     -->This exception happens when there is a "synthax issue" on the locator value
+
+    SOLUTION:
+
+       * Simply copy your value into the website and make sure it is unique.
+
+       * It mostly happens for XPATH locator.
+
+   4- Can you tell me 5 Exceptions that you faced during Automation?
+
+     *NOSUCH ELEMENT EXCEPTION
+
+     *STALE ELEMENT REFERENCE EXCEPTION
+
+     *INVALID SELECTOR EXCEPTION
+
+
+
+
+   Lesson 08
+
+   RECAP:8/14/2024
+
+ ACTIONS: It is a class to handle "MOUSE ACTIONS"
+
+  *clickAndHold -->It clicks and Holds the WebElement
+
+  *release      -->It releases the WebElement that is hold(Generall it is used after ClickAndHold)
+
+
+ Horizontal Slider:
+
+  In some automation test cases, I faced this kind of sliders
+
+  *I specifically handle it with "KEYS" class from Selenium
+
+  Keys.ENTER                        -->It presses the "ENTER" button from keyboard
+
+  Keys.ARROW up/down/right/left     --> It presses the arrows button
+
+
+  JAVASCRIPT:It is a programming language that we use it time to time to handle specific functions(click,scroll)
+
+  JavaScriptExecutor js=(JavaScriptExecutor) driver;
+
+  *js.executeScript("arguments[0].click()",WebElement);              -->It clicks the WebElement
+
+  *js.executeScript("arguments[0].scrollIntoView(true)",WebElement)  -->It scrolls to the WebElement
+
+
+ -->How to handle ElementClickIntercepted Exception?
+
+   *This exception is thrown when the element is not visible on the screen and also you are trying to
+
+   click this element.(something might be blocking or not visible on screen)
+
+   SOLUTION:You need to scroll to the WebElement and make it visible.
+
+
+   Lesson 09
+
+   RECAP:8/17/2024
+
+WINDOW HANDLE: It is a way to switch the windows which we need to automate. (windows,tabs...)
+
+
+  Set<String> allPagesID=driver.getWindowHandles(); // size 3
+
+  for(String pageID:allPagesID){
+
+    driver.switch.window(pageId);
+
+    If(driver.getTitle("amazon")){
+      break;
+    }
+  }
+
+  BrowserUtils.switchWindow(driver,"amazon");
+
+
+IFRAME: Html inside html. It is about protection.
+
+  -->Customers want to give some ads,doc,videos.. through websites.The websites renting the spaces from their main
+
+  html and ask customers to send their html structure. Then they embed(put) the html inside of main html.
+
+ -->You need to make sure the WebElement that you are looking for is inside of Iframe.
+
+ -->Mostly, if the WebElement is in iframe and if you do not handle it.It throws "NOSUCH ELEMENT EXCEPTION".
+
+ -->driver.switchTo.frame(WebElement) **
+
+ -->driver.switchTo.frame(Name or ID) ***
+
+ -->driver.switchTo.frame(index) *
+
+INTERVIEW QUESTIONS:
+
+1-What is the difference between driver.getWindowHandle and driver.getWindowHandles?
+
+  getWindowHandle -->Return single PageId     -->String
+
+  getWindowHandles -->Return multiple pageId  -->Set<String>
+
+
+2-Where do you use collections in your automation framework?
+
+  List --> FindElements method
+
+  Set  --> GetWindowHandles method
+
+
