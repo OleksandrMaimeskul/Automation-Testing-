@@ -1,4 +1,4 @@
-package TestNGConsept;
+package TestNGConcept;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,9 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import javax.swing.text.html.parser.Parser;
 import java.time.Duration;
-import java.util.Collections;
 import java.util.List;
 
 import static java.lang.Double.parseDouble;

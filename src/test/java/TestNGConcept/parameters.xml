@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Practice Parameters Suite">
+    <test name="Parameters tests">
+        <parameter name="firstName" value="Oleksandr"> </parameter>
+        <parameter name="first" value=" Maimeskul "> </parameter>
+        <parameter name="second" value="from "> </parameter>
+        <parameter name="third" value="the Houston"> </parameter>
+        <classes>
+            <class name="TestNGConcept.ParametersLogic">
+            </class>
+        </classes>
+    </test>
+</suite>

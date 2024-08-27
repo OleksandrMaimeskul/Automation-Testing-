@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <test name="Spruce test">
+        <parameter name="search" value="Fish for Dinner"> </parameter>
+        <parameter name="cardTitle" value="6-Ingredient Roasted Salmon Fillets"> </parameter>
+        <classes>
+            <class name="com.qa.Spruce.Tests.SpruceMainTest"> </class>
+        </classes>
+    </test>
+</suite>

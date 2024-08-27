@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <test name="Blaze tests">
+        <parameter name="userName" value="Oleksandr1213332"> </parameter>
+        <classes>
+            <class name="com.qa.blaze.tests.BlazeMainTest"> </class>
+            <class name="com.qa.blaze.tests.BlazeOrderTest"> </class>
+            <class name="com.qa.blaze.tests.BlazeProductTest"> </class>
+            <class name="com.qa.blaze.tests.ProductPageTest"> </class>
+        </classes>
+    </test>
+</suite>

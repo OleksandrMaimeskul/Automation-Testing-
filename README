@@ -479,4 +479,312 @@ INTERVIEW QUESTIONS:
   Set  --> GetWindowHandles method
 
 
-bg
+  Lesson 10
+
+
+  RECAP:8/19/2024
+
+NESTED FRAME: It is html inside html
+
+  Sign of nested frame:
+
+   *frameset --> it is a big sign of having multiple frame in the website
+
+ --> driver.switchTo.frame("TopFrame");
+
+ --> driver.switchTo.frame("LeftFrame");
+
+ --> driver.switchTo.ParentFrame();
+
+ *** driver.switchTo.defaultContent() ==> It goes to directly to the main html
+
+
+ INTERVIEW QUESTIONS:
+
+ 1-How do you handle pop-up in Selenium?
+
+  There are several ways to handle pop-up in Selenium:
+
+    *OS(Operation System) pop-up -->It directly comes from OS, so we do not handle it with Selenium(Robot class)
+
+    *HTML pop-up                 -->We handle this pop-up simply inspect and click the button
+
+  ***JS(Java Script) pop-up      --> We handle JS pop-up with "ALERT INTERFACE" from Selenium
+
+     -->Alert alert=driver.switchTo.alert();
+
+       *alert.accept()   -->It clicks "OK" button
+
+       *alert.dismiss()  -->It clicks "CANCEL" button
+
+       *alert.getText()  -->It gets the text from pop-up
+
+       *alert.sendKeys() -->It sends the data to the pop-up
+
+
+ 2-How do you upload file in Selenium?
+
+   To be able to upload any file in Selenium, I find the location of file(Right Click get info) then I sendKeys
+
+   to the location of ChooseFile. I will upload the file
+
+
+ 3-What is the difference between SoftAssert and HardAssert?
+
+   Hard Assert:
+
+  1-It is strict about failure, it means once your test fails then your execution will "STOP" at the line it fails
+
+  2-You do not need to create an object to use Assertion. (Assert.assertEquals) -->STATIC METHODS
+
+  3-There is no activation needed to apply validation
+
+   Soft Assert:
+
+   1-It is flexible about failure, It means once your test fails then your execution will "CONTINUE" for next lines
+
+   2-You do need to create an object to use softAssertion (SoftAssert softAssert=new SoftAssert) -->NO STATIC METHODS
+
+   3-You must use "softAssert.assertAll()" method to be able to activate.
+
+
+   *NoSuchFrame Exception:It happens once you are looking an iframe in a wrong spot and also the value of the
+
+   iframe might be wrong
+
+   SOLUTION:Check your frame value(Most common mistake) and Check that you are in the correct frame(nested frame)
+
+   *UnHandledAlert Exception: It happens once you do not handle the alert that it pop-up.
+
+    SOLUTION: Check the timing is good(it means you are not switching your alert before it pop-ups)
+
+
+=======================LEVEL 3 ===============================
+
+POM(Page Object Model): It is way to to "ORGANIZE" all the webElements, Pages, Tests, etc...
+	---> It mean this Model will make your code more "Professional", "Organized" and "Structured"(Well Maintained)
+	---> We will apply this model on a project step by step
+
+
+	 Lesson 11
+
+
+RECAP:8/20/2024
+
+POM:It is a model to make your automation framework more organized,professional ..etc
+
+
+  com,edu,gov   --> It says the project that you are working is UI(Website)
+
+  qa,dev,stage  --> It says the environment that you are doing testing
+
+  bank          --> It is the name of the project
+
+    *pages      --> You store your "constructor" (It initiliaze your WebElements) , "WebElements" , "Methods"
+
+          1- public LoginPage(WebDriver driver){PageFactory.initElements(driver,this)}
+
+          2- @FindBy(xpath("//a[@id='ahmet']"))
+
+           WebElement element;
+
+          3- public void addCustomerFunctionality(){customer.click; customer.sendKeys("Ahmet")}
+
+    *tests      --> You store your @Test annotations in this class , actual execution happens in here.
+Свернуть
+message.txt
+1 кб
+
+
+
+
+	 Lesson 12
+
+
+	 RECAP:8/21/2024
+
+INTERVIEW QUESTIONS:
+
+1-What do you know about TestBase?
+
+  TestBase is a class which I store "BeforeMethod & AfterMethod" annotations.
+
+   *@BeforeMethod --> It runs before every "@Test" annotations.
+
+                  --> We use it to setup our automation and navigation for the URL
+
+                  --> You will not repeat yourself for the @Test (setup)
+
+   *@AfterMethod  --> It runs after every "@Test" annotations
+
+                  --> We use it for ScreenShot
+
+                  --> We use it for tearDown(driver.quit())
+
+NOTES: To be able to access the BeforeMethod and AfterMethod from test classes.We do inheritance ("EXTENDS") keyword.
+
+2-What is DriverHelper?(What makes your automation special?)
+
+  -->DriverHelper:Is a special class(Singleton Pattern Design) that I use "ENCAPSULATION" -->private keyword
+
+     *private Constructor
+
+     *if(!driver==null) -->condition
+
+  NOTE:DriverHelper class will "CENTRALIZE" your driver. We can choose any browser we want to initiliaze.(chrome..)
+
+   -->ConfigReader:Is a special file that you hide/protect your private data in here.
+
+      *Once you push your code to github(online storage),team will be able to see your username,password...
+
+      *ConfigReader will prevent it to be seen by them.
+
+   -->GetScreenShot:Is a method that I use to get screenshot once something fails during automation
+
+      * Why is it important ?
+
+        & You can easily see the the step that it is failing
+
+        & You can easily send the screenshot to developer about the issue(bug)
+
+        & Sometimes it is related with QA environment(slowness,glitch), the screenshot can help you to understand
+
+        it is not a test case issue, it is an enviroment issue.
+
+
+3-Can you make your constructor private,static,final?
+
+   -->You cannot make the constructor static or final but you can make it private with Singleton Pattern Design
+
+   (Centralizing your Driver) -->DriverHelper
+
+4-Where do you use OOP in your automation framework?
+
+   *PolyMorphism            --> WebDriver driver =new ChromeDriver()  , List list=new ArrayList()
+
+   *Inheritance             --> Extends keyword from TestClasses to TestBase
+
+   *Encapsulation           --> Singleton Pattern Design (DriverHelper)
+
+   *Interface               --> Alert alert = driver.switchTo.alert(); (Alert is interface) (WebDriver)
+
+
+
+Lesson 13
+
+
+RECAP:8/24/2024
+
+INTERVIEW QUESTIONS:
+
+1-How do you create Regression and Smoke Suite with TestNG?
+
+  To be able to create Suites we need to follow these steps
+
+    *Create .xml file (Regression.xml,Smoke.xml)
+
+    *Add the doctype from TestNG documentation at the top of the xml file(
+       (<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">)
+
+    *Add Specific Structure
+
+    <suite name="Regression Suite">
+
+      <test name="Bank Test Cases">
+
+        <classes>
+
+            <class name="com.qa.bank.tests.BankLoginTest"> <class>
+            <class name="com.qa.bank.tests.BankManagerTest"> <class>
+            <class name="com.qa.bank.tests.BankCustomerTest"> <class>
+
+     NOTE:TO be able to activate Suite Run(once) click tools( at the menu) -->XML actions --> XSD Schema
+
+      -->Delete the XSD file from Runner package.
+
+2-How do you create and share your test report with your team?
+
+  First of all, to be able to create TestNG report, you need to activate "LISTENERS" in your xml file
+
+    *Run your xml file (Regression,Smoke)
+
+    *Click Drop-Down at the top which ends with .xml
+
+    *Click Edit Configuration
+
+    *Click Listeners at the middle of screen
+
+    *Click "+" to add listeners
+
+    *First you add "Emailable Report" -->PLS Mention
+
+    *Second you add "Failed Report"   -->PLS Mention
+
+    *Run your xml again to get the report
+
+
+  HOW DO YOU SHARE YOUR REPORT:
+
+    -->I e-mail this report (emailable report) that I have from regression
+
+    -->I send the link through channels(google meet,slack etc..)
+
+    -->I can download it to Google driver and share the location with my team through chat/email.
+
+3-How do you run failed tests after regression in your Automation Framework ?
+
+  First of all, you need to activate FailedTests in your Listeners.
+
+    *This file will be seen when there is failure
+
+    *This file will store only Failures, so you just need to fix the issues and then run from here.(ONLY FAILURES)
+
+Lesson 14
+
+RECAP:8/26/2024
+
+@Parameters(from TestNG) --> It is a way to parameterized the data through xml file.
+
+
+  XML FILE:
+
+  <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Regression Suite">
+
+    <test name="Blaze Test">
+
+      <parameters name="name" value="Ahmet"
+      <parameters name="lastName" value="Baldir"
+
+       <classes>
+
+           <class name="com.qa.blaze.tests.BlazeSignUpTest"> <class>
+
+
+JAVA CLASS:
+
+
+@Parameters({"name","lastName"}) //this part is a link between xml to .java
+@Test
+public void validateLoginFunctionality(String name,String lastName){
+  sout(name + lastName)
+}
+
+NOTE:Once you have parameters annotation, you have to run your tests from "XML" file.
+
+ENHANCEMENTS:
+
+-->Centralized WebElements     -->Page Classes
+
+-->Centralized Methods         -->Page Classes
+
+-->Centralized Tests           -->Test Classes
+
+-->Centralized Driver          -->DriverHelper
+
+-->Centralized Test Cases      -->.xml file(Regression)
+
+-->Centralized Parameters      -->.xml file
+
+-->Centralized private Data    -->Config.Reader

@@ -1,4 +1,4 @@
-package TestNGConsept;
+package TestNGConcept;
 
 import org.testng.annotations.Test;
 
