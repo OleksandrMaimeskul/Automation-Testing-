@@ -479,6 +479,7 @@ INTERVIEW QUESTIONS:
   Set  --> GetWindowHandles method
 
 
+
   Lesson 10
 
 
@@ -739,6 +740,7 @@ INTERVIEW QUESTIONS:
 
     *This file will store only Failures, so you just need to fix the issues and then run from here.(ONLY FAILURES)
 
+
 Lesson 14
 
 RECAP:8/26/2024
@@ -788,3 +790,106 @@ ENHANCEMENTS:
 -->Centralized Parameters      -->.xml file
 
 -->Centralized private Data    -->Config.Reader
+
+
+Lesson 15
+
+Ahmet B — Сегодня, в 18:34
+RECAP:8/27/2024
+
+DataProvider:It is a way to run "SAME TEST" with "DIFFERENT SET OF DATA"
+
+
+public class AllData(){
+
+
+  @DataProvider("positiveLogin")
+
+  public Object[][] getData(){
+
+    return new Object[][]{
+
+      {"Ahmet","123123","sds.jpg","12"},
+      {"Mehmet","54232","1.jpg","35"},
+      {"Mehmet","54545","2.jpg","23"},
+    }
+  }
+
+  @Test(DataProvider="positiveLogin",dataproviderclass=AllData.class)
+  public void validateHappyPathLogin(String username,String password,String picture,String age){
+....
+
+  }
+
+}
+
+INTERVIEW QUESTIONS:
+
+1-What is Wait Times?
+
+  It is a way to handle wait times issues(timing) in Selenium.(Elements are loading slowly,webpage is slow)
+
+   NOTE: Thread.sleep() is not a type of wait times. (It comes from java Library)
+
+   Suggesstion: As much as possible avoid using Thread.sleep() because it no matter what stops the code
+
+   and can cause some extensive wait for regression results.
+
+2-What type of Wait Times do you know ?
+
+  We have 3 types of Wait Times:
+
+  *** 1--> Implicitly Wait: It will wait to load for the whole page elements that driver is pointing(@FindBy)
+
+      --> It means it will wait for only the elements that you are looking in your page classes
+
+      --> driver.manage.timeouts.ImplicitlyWait(Duration.ofSeconds(10));
+
+  **  2--> Explicitly Wait: It is a way to to handle wait times issue and it can be applied for single ELement
+
+       -->You will provide certain time to wait and it is all about "EXPECTED CONDITION"
+
+       --> ElementIsVisible   --> ElementIsClickable    -->AlertIsPresent
+
+       --> WebDriverWait wait =new WebDriverWait(driver,Duration.ofSecond(10));
+
+           element.wait.until(ExpectedConditions(VisibilityOf(element)))
+
+  *   3--> Fluent Wait: It is a way of handling wait time issues that applys for "SINGLE ELEMENT"
+
+       --> It periodically checks the elements is there or not. (polling)
+
+       --> No condition is needed
+
+
+3-Where do you use Wait times in your automation framework?
+
+    -->ImplicitlyWait --> DriverHelper Class
+
+    -->ExplicitlyWait --> Whenever we need a condition to wait for the element
+
+    -->FluentWait     -->Whenever we need to check the element periodically
+
+4-Difference between Thread.sleep and Wait Times?
+
+ * Thread.sleep(10000) will wait no matter what for the execution -->Element is loaded in 1 sec but still wait 10 sec
+
+    It comes from Java Library
+
+ * Wait Times will wait for the element once it is loaded(there is flexibiliy of waiting)
+
+    -->if element loads in 1 sec --> It will continue  3 sec --> continue 5 sec -->Continue
+
+    -->It comes from Selenium Library
+
+
+
+    https://automationexercise.com/
+
+
+
+
+
+
+
+
